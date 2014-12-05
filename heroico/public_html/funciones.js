@@ -295,3 +295,32 @@ function tokenHandler(result) {
     localStorage.setItem("token", result);
     update();
 }
+
+function cargarJornadas(){
+    
+    var url = "http://heroico.tudomicilio.net/administrador/leerJornadas";
+    
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: {}
+    }).done(function(msg) {
+        
+        var json = eval("(" + msg + ")");
+        
+        var msj = "<ul>Jornadas";
+        for(var i = 0 ; i<json.jornadas.length; i++){
+            msj += "<li>"
+                  + "<p>"+json.jornadas[i].descripcion+"</p>"
+                    + "<p>lugar: "+json.jornadas[i].lugar+"</p>"
+                     + "<p>Fecha: "+json.jornadas[i].fecha+"</p>"
+                      + "<p>Hora: "+json.jornadas[i].hora+"</p>"
+                    +'</li>';
+            
+        }
+        msj += "</ul>";
+        
+        $("#contenido").html(msj);
+    });
+    
+}

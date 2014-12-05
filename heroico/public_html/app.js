@@ -42,7 +42,7 @@ var homePage =
     '<div>' +
         '<div id="header">'+
               '<table width="100%" height="48px;" border="0"><tr><td width="54px"><button class="imgMenu" onclick="mostrarOcultarMenu();"></button></td>'+
-              '<td><div id="title"><img src="images/Logo.png" width="80%"></div></td><td width="54px"><button onclick="panico()"><div class="btn-der">Alerta Rapida</div></button></div></td></tr></table>'+    
+              '<td><div id="title"><img src="images/Logo.png" width="80%"></div></td><td width="54px"><button style="background:transparent;" onclick="panico()"><div class="btn-der">Alerta Rapida</div></button></div></td></tr></table>'+    
          '</div>'+ 
          '<div id="curva-header"></div>'+   
 
@@ -65,8 +65,8 @@ var homePage =
                                         '<tr>'+
                                         '<td align="center"><a href="#page1"><button class="btn-circ rojo">Como prevenir?</button></a></td>'+
                                         '<td align="center"><button class="btn-circ rojo" onclick="cargaDenuncia()">Donde denunciar?</button></td>'+
-                                        '<td align="center"><button class="btn-circ rojo">Soy victima</button></td>'+
-                                        '<td align="center"><button class="btn-circ rojo">Jornadas y calendarios?</button></td>'+
+                                        '<td align="center"><a href="#page3"><button class="btn-circ rojo">Soy victima</button></a></td>'+
+                                        '<td align="center"><a href="#page4"><button class="btn-circ rojo">Jornadas y calendarios?</button></a></td>'+
                                         '</tr></table>'+
                                     '</div>'+
 
@@ -86,8 +86,8 @@ var homePage =
     
     '<div id="light" class="modal">'+
      '<div id="header">'+
-              '<table width="100%" height="48px;" border="0"><tr><tdpng" width="80%"></div></td><td width="54px"> width="54px"><button class="btn-izq" onclick="ocultarVentana();"></button></td>'+
-              '<td><div id="title"><img src="images/Logo.png" width="80%"></div></td><td width="54px"><button onclick="panico()"><div class="btn-der">Alerta Rapida</div></button></div></td></tr></table>'+    
+              '<table width="100%" height="48px;" border="0"><tr><tdpng" width="80%"></div></td><td width="54px"><button class="btn-izq" onclick="ocultarVentana();"></button></td>'+
+              '<td><div id="title"><img src="images/Logo.png" width="80%"></div></td><td width="54px"><button style="background:transparent;" onclick="panico()"><div class="btn-der">Alerta Rapida</div></button></div></td></tr></table>'+    
          '</div>'+ 
          '<div id="curva-header"></div>'+ 
           '<div id="wrapperB">'+
@@ -167,6 +167,25 @@ var denunciar =
 '</table>'
 ;
 
+var victima = '<div style="margin-left:23%;"><img src="images/victima.png" width="140px;"></div>'+
+'<div style="background-color:#161324; width:100%; height:auto; padding:10px;">'+
+'<div class="text-T">PERSONAL DEL PRIMER CONTACTO</div>'+
+'<div class="cont-T">Detectan los casos (la familia, maestros, médicos, amigo, vecinos, policía, equipos psicosociales y comunidad en general).</div>'+
+
+'<div class="text-T">PERSONAL DEL SEGUNDO CONTACTO</div>'+
+'<div class="cont-T">Instituciones que brindan atención y apoyo a los niños en riesgo ( ICBF, Comisarias de Familia, casas de justicias, Fiscalia y ONG’S</div>'+
+
+'<div class="text-T">PERSONAL DEL TERCER CONTACTO</div>'+
+'<div class="cont-T">Amplia gama de servicios para restablecer derechos y capacidades de los niños, como son, los médicos, psicológos, coaiales, laborales financieros y de albergue.</div>'+
+
+'</div>'+
+'';
+
+var calendarios = '<div id="contenido"></div>'+
+
+'{{evento}}'
+;
+
 var slider = new PageSlider($("#container"));
 $(window).on('hashchange', route);
 
@@ -182,7 +201,10 @@ function route(event) {
         page = merge(detailsPage, {titulo: "DENUNCIAR",contenido:denunciar});
 //        slider.slide($(page), "right");
     } else if (hash === "#page3") {
-        page = merge(detailsPage, {titulo: "SOY VICTIMA"});
+        page = merge(detailsPage, {titulo: "PROCESO DE ATENCION",contenido:victima});
+//        slider.slide($(page), "right");
+    }else if (hash === "#page4") {
+        page = merge(detailsPage, {titulo: "CALENDARIO",contenido:calendarios,evento:cargarJornadas()});
 //        slider.slide($(page), "right");
     }else {
         page = homePage;
@@ -197,6 +219,7 @@ function route(event) {
 function merge(tpl, data) {
     return tpl.replace("{{titulo}}", data.titulo)
                 .replace("{{contenido}}", data.contenido)
+                 .replace("{{evento}}", data.evento)
             ;              
 }
 

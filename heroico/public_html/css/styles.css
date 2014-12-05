@@ -122,8 +122,8 @@ body,ul,li {
     padding: 0;
     margin: 0;
     border: 0;
-      overflow-x: hidden; 
-      background-color:#f9f9f9;
+  
+    background-color:#f9f9f9;
 
 }
 
@@ -131,7 +131,7 @@ body {
     font-size: 12px;
     font-family: 'Oswald', helvetica, arial;
     overflow: auto; /* this is important to prevent the whole page to bounce */
-     overflow-x: hidden; 
+      
 }
 button{
     border: 0;
@@ -526,4 +526,19 @@ margin-top: -50px;
   width: 29px;
   height: 43px;
   margin-left:50%; 
+}
+
+.text-T{
+  color: #1f8ec5;
+  font-family: 'Eagle-bold';
+  font-size: 16px;
+  margin-top: 8px;
+ }
+
+.cont-T{
+color:#FFFFFF;
+  font-family: 'Oswald', helvetica, arial;
+  font-size: 16px;
+    margin-bottom: 6px;
+    text-align: justify;
 }
