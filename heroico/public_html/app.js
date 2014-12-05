@@ -65,7 +65,7 @@ var homePage =
                                         '<tr>'+
                                         '<td align="center"><a href="#page1"><button class="btn-circ rojo">Como prevenir?</button></a></td>'+
                                         '<td align="center"><button class="btn-circ rojo" onclick="cargaDenuncia()">Donde denunciar?</button></td>'+
-                                        '<td align="center"><a href="#page3"><button class="btn-circ rojo">Soy victima</button></a></td>'+
+                                        '<td align="center"><a href="#page3"><button class="btn-circ rojo">Actores Involucrados</button></a></td>'+
                                         '<td align="center"><a href="#page4"><button class="btn-circ rojo">Jornadas y calendarios?</button></a></td>'+
                                         '</tr></table>'+
                                     '</div>'+
