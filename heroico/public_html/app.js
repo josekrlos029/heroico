@@ -42,7 +42,7 @@ var homePage =
     '<div>' +
         '<div id="header">'+
               '<table width="100%" height="48px;" border="0"><tr><td width="54px"><button class="imgMenu" onclick="mostrarOcultarMenu();"></button></td>'+
-              '<td><div id="title"><img src="images/Logo.png" width="80%"></div></td><td width="54px"><button style="background:transparent;" onclick="panico()"><div class="btn-der"><p style="margin-top:10px">S.O.S</p></div></button></div></td></tr></table>'+    
+              '<td><div id="title"><img src="images/Logo.png" alt="heroico por la niñez de cartagena" width="80%"></div></td><td width="54px"><button style="background:transparent;" onclick="panico()"><div class="btn-der"><p style="margin-top:10px">S.O.S</p></div></button></div></td></tr></table>'+    
          '</div>'+ 
          '<div id="curva-header"></div>'+   
 
@@ -50,8 +50,8 @@ var homePage =
                    '<div class="scroller">'+
                        
                            '<div class="personaje-home">'+
-                                 '<table><tr><td width="50%"><img src="images/personaje-home.png" width="200px;"></td>'+
-                               '<td><div class="Text-Home"><img src="images/Text-Home.png" width="150px;"></td></tr></table>'+
+                                 '<table><tr><td width="50%"><img src="images/personaje-home.png" alt="Hola, soy heroico" width="200px;"></td>'+
+                               '<td><div class="Text-Home"><img src="images/Text-Home.png" alt="Juntos combatiremos la explotacion sexual contra los niños" width="150px;"></td></tr></table>'+
                            '</div>'+
                            '<div class="contenedor-cajas">'+
                            
