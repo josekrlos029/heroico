@@ -76,7 +76,7 @@
 
 #indicator {
   position: relative;
-  width: 140px;
+  width: 144px;
   height: 16px;
   margin: 10px auto;
   background: url('../images/Punto.png');
@@ -115,7 +115,7 @@ textarea,select,button,input:focus{
 }
 html {
     -ms-touch-action: none;
-      overflow-x: hidden;
+     
 }
 
 body,ul,li {
@@ -462,7 +462,7 @@ z-index: 1;
      height: 100%;
      background:#FFFFFF;
      z-index:1002;
-     overflow: auto;
+     overflow-y: auto;
      border-radius: 0px;
 -webkit-animation-duration:.25s;
  -webkit-animation-iteration-count:initial;
@@ -541,4 +541,13 @@ color:#FFFFFF;
   font-size: 16px;
     margin-bottom: 6px;
     text-align: justify;
+}
+
+#jornadas{
+  background-color:transparent;
+}
+
+#jornadas li{
+  margin: 0;
+background:#1f8ec6; 
 }

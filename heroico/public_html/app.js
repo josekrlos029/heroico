@@ -42,7 +42,7 @@ var homePage =
     '<div>' +
         '<div id="header">'+
               '<table width="100%" height="48px;" border="0"><tr><td width="54px"><button class="imgMenu" onclick="mostrarOcultarMenu();"></button></td>'+
-              '<td><div id="title"><img src="images/Logo.png" width="80%"></div></td><td width="54px"><button style="background:transparent;" onclick="panico()"><div class="btn-der">Alerta Rapida</div></button></div></td></tr></table>'+    
+              '<td><div id="title"><img src="images/Logo.png" width="80%"></div></td><td width="54px"><button style="background:transparent;" onclick="panico()"><div class="btn-der"><p style="margin-top:10px">S.O.S</p></div></button></div></td></tr></table>'+    
          '</div>'+ 
          '<div id="curva-header"></div>'+   
 
@@ -87,7 +87,7 @@ var homePage =
     '<div id="light" class="modal">'+
      '<div id="header">'+
               '<table width="100%" height="48px;" border="0"><tr><tdpng" width="80%"></div></td><td width="54px"><button class="btn-izq" onclick="ocultarVentana();"></button></td>'+
-              '<td><div id="title"><img src="images/Logo.png" width="80%"></div></td><td width="54px"><button style="background:transparent;" onclick="panico()"><div class="btn-der">Alerta Rapida</div></button></div></td></tr></table>'+    
+              '<td><div id="title"><img src="images/Logo.png" width="80%"></div></td><td width="54px"><button style="background:transparent;" onclick="panico()"><div class="btn-der"><p style="margin-top:10px">S.O.S</p></div></button></div></td></tr></table>'+    
          '</div>'+ 
          '<div id="curva-header"></div>'+ 
           '<div id="wrapperB">'+

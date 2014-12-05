@@ -308,7 +308,7 @@ function cargarJornadas(){
         
         var json = eval("(" + msg + ")");
         
-        var msj = "<ul>Jornadas";
+        var msj = "<ul id=jornadas>Jornadas";
         for(var i = 0 ; i<json.jornadas.length; i++){
             msj += "<li>"
                   + "<p>"+json.jornadas[i].descripcion+"</p>"
