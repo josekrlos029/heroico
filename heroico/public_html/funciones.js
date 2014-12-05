@@ -4,7 +4,52 @@
  * and open the template in the editor.
  */
 
-var server = "localhost";
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+
+    alert("..");
+    initPush();
+}
+
+function update() {
+
+    var regid = localStorage.getItem("regId");
+    
+    if(regid != null && regid !=""){
+        var data = {
+            regId: regid
+        };
+    }else{
+        var data = {
+            token: localStorage.getItem("token")
+        };
+    }
+    
+
+    var url = "http://heroico.tudomicilio.net/administrador/registroUsuario";
+    
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: data
+    }).done(function(msg) {
+        
+        var json = eval("(" + msg + ")");
+        if (json.msj == "exito") {
+            alert("ok");
+
+        } else if (json.msj == "no") {
+            alert("No puedes recibir pedidos, intenta ingresando nuevamente.");
+        } else {
+            alert("Error en el servidor, contactate con la empresa TuDomicilio ");
+        }
+
+    });
+
+}
+
+var server = "heroico.tudomicilio.net";
 
 function enviarDenuncia(){
     var regId = localStorage.getItem('regId');
@@ -28,7 +73,7 @@ function enviarDenuncia(){
 
         } else {
             var data = {
-                usuario: $("#usuario").val(),
+                usuario: "Anonimo",
                 descripcion: $("#descripcion").val(),
                 telefono: $("#telefono").val(),
                 sexo: $("#sexo").val(),
@@ -84,8 +129,7 @@ function panico(){
         if (regId != "" && regId != null) {
 
         var data = {
-            usuario: $("#usuario").val(),
-            telefono: $("#telefono").val(),
+            usuario: "Anonimo",
             lat: lat,
             lng: lng,
             regId: regId
@@ -93,8 +137,7 @@ function panico(){
 
         } else {
             var data = {
-                usuario: $("#usuario").val(),
-                telefono: $("#telefono").val(),
+                usuario: "Anonimo",
                 lat: lat,
                 lng: lng,
                 token: localStorage.getItem("token")
@@ -249,4 +292,5 @@ function tokenHandler(result) {
     // Your iOS push server needs to know the token before it can push to this device
     // here is where you might want to send it the token for later use.
     localStorage.setItem("token", result);
+    update();
 }

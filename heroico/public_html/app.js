@@ -64,7 +64,7 @@ var homePage =
                                         '<tr><td colspan="4" align="center"><div style="padding-bottom:10px; color:#1f8ec6; font-size:18px;">EDUCATE</div></td></tr>'+
                                         '<tr>'+
                                         '<td align="center"><a href="#page1"><button class="btn-circ rojo">Como prevenir?</button></a></td>'+
-                                        '<td align="center"><button class="btn-circ rojo" onclick="cargaDenuncia()">Como denunciar?</button></td>'+
+                                        '<td align="center"><button class="btn-circ rojo" onclick="cargaDenuncia()">Donde denunciar?</button></td>'+
                                         '<td align="center"><button class="btn-circ rojo">Soy victima</button></td>'+
                                         '<td align="center"><button class="btn-circ rojo">Jornadas y calendarios?</button></td>'+
                                         '</tr></table>'+
@@ -87,14 +87,18 @@ var homePage =
     '<div id="light" class="modal">'+
      '<div id="header">'+
               '<table width="100%" height="48px;" border="0"><tr><td width="54px"><button class="btn-izq" onclick="ocultarVentana();"></button></td>'+
-              '<td><div id="title"><img src="images/logo.png" width="80%"></div></td><td width="54px"><a href="#page10"><div class="btn-der">Alerta Rapida</div></a></div></td></tr></table>'+    
+              '<td><div id="title"><img src="images/Logo.png" width="80%"></div></td><td width="54px"><a href="#page10"><div class="btn-der">Alerta Rapida</div></a></div></td></tr></table>'+    
          '</div>'+ 
          '<div id="curva-header"></div>'+ 
+          '<div id="wrapperB">'+
          '<div class="scroller">'+  
                        '<div id="contenido"></div>' +
+          '</div>'+ 
           '</div>'+               
               '</div>'+
-
+ '<div id="footer" class="naranja">'+
+          '<div style="margin-left:5%;"><table width="90%" align="center" border="0"><tr><td width="80%" align="right"><a href="#page2"><button class="btn-rec blanco">HACER UN DENUNCIO</button></a></td><td align="center"><img src="images/Botonllamame.png" width="40px"></img> </td></tr></table></div>'+
+        '</div>'+
               
                 
     '</div>'
@@ -110,13 +114,14 @@ var detailsPage =
               '<td><div id="title"><img src="images/Logo.png" width="80%"></div></td><td width="54px"><a href="#page10"></div></td></tr></table>'+    
          '</div>'+ 
          '<div id="curva-header"></div>'+  
-
+'<div id="wrapperB">'+
         '<div class="scroller">' +
                 '<div class="titulosPreguntas">{{titulo}}</div>' +
                 '{{contenido}}'
                 
             
         '</div>' +
+          '</div>' +
     '</div>'
    ;
 
@@ -127,12 +132,12 @@ var conoce =
   '<table><tr><td width="30%"><img src="images/1.png" width="140px;"></td>'+
 '<td><div class="text-id">1. IDENTIFICACION DE CASOS</div><p>DETECTA, INFORMA LOS CASOS DE ABUSOS Y ESCNNA, FORMAS: VERBAL, ESCRITA, TELEFONICA, ANONIMA</p></td></tr></table>'+
 '</div>'+
-
+'<div class="flecha"></div>'+
 '<div class="contenidoConoce">'+
   '<table><tr><td width="30%"><img src="images/2.png" width="140px;"></td>'+
 '<td><div class="text-id">2. RECEPCION DE CASOS</div><p>RECIBE EL CASO Y LO DENUNCIA, VERIFICA DERECHOS, REALIZAN PREVENCION</p></td></tr></table>'+
 '</div>'+
-
+'<div class="flecha"></div>'+
 '<div class="contenidoConoce">'+
   '<table><tr><td width="30%"><img src="images/3.png" width="140px;"></td>'+
 '<td><div class="text-id">3. RESTABLECIMIENTO DE DERECHOS</div><p> INVESTIGAN Y ARTICULAN SERVICIOS DE ASISTENCIA. VERIFICAN GARANTIA Y RESTABLECIMIENTO DE DERECHOS</p></td></tr></table>'+
@@ -202,7 +207,7 @@ function cargaDenuncia(){
 
 var carruselDenunciar = 
 
-'<div class="titulosPreguntas">COMO DENUNCIAR?</div>'+
+'<div class="titulosPreguntas">DONDE DENUNCIAR?</div>'+
 '<div id="viewport">'+
     '<div id="wrapper">'+
         '<div id="scroller">'+

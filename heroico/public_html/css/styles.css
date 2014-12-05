@@ -16,7 +16,7 @@
 #viewport {
   position: relative;
   width: 256px;
-  height: 300px;
+  height: 320px;
   margin: 0 auto;
   overflow: hidden;
   margin-top: 10px;
@@ -25,7 +25,7 @@
 
 #wrapper {
  width: 256px;
-  height: 300px;
+  height: 320px;
   margin: 0 auto;
    overflow: hidden;
 }
@@ -36,7 +36,7 @@
   z-index: 1;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   width: 2304px;
-  height: 300px;
+  height: 320px;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -57,7 +57,7 @@
 
 .slide {
   width: 256px;
-  height: 300px;
+  height: 320px;
   float: left;
 }
 
@@ -76,7 +76,7 @@
 
 #indicator {
   position: relative;
-  width: 144px;
+  width: 140px;
   height: 16px;
   margin: 10px auto;
   background: url('../images/Punto.png');
@@ -123,6 +123,7 @@ body,ul,li {
     margin: 0;
     border: 0;
       overflow-x: hidden; 
+      background-color:#f9f9f9;
 
 }
 
@@ -138,6 +139,7 @@ button{
 }
 
 #header {
+  margin-top:15px;
     position: absolute;
     z-index: 3;
     top: 0;
@@ -153,7 +155,7 @@ button{
 
 }
 #curva-header{
-    top:-15px;
+    top:2px;
     left:-5%;
     width: 110%;
     height: 100px;
@@ -245,7 +247,17 @@ background-repeat: no-repeat;
     overflow-y: auto;
     overflow-x: hidden;      
 }
-
+#wrapperB{
+    position: absolute;
+    z-index: 1;
+    top: 45px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background:#f1efeb;
+    overflow-y: auto;
+    overflow-x: hidden;      
+}
 .page .scroller{
     position: absolute;
     z-index: 1;
@@ -443,12 +455,12 @@ z-index: 1;
     color:#c61300;
  }   
 .modal {
- overflow: hidden; 
+ overflow-x: hidden; 
      display: none;
      position: absolute;
      width: 100%;
      height: 100%;
-     background:#f1efeb;
+     background:#FFFFFF;
      z-index:1002;
      overflow: auto;
      border-radius: 0px;
@@ -473,7 +485,8 @@ z-index: 1;
 width: 90%;
 height: 150px;
 background:#1f8ec6; 
-margin-bottom: 80px;
+margin-bottom: 10px;
+margin-top: 10px;
 margin-left: 10%;
  }
 
@@ -507,3 +520,10 @@ margin-top: -50px;
   font-family: arial
 }
 
+.flecha{
+  background-image: url('../images/flecha.png');
+  background-repeat:no-repeat;
+  width: 29px;
+  height: 43px;
+  margin-left:50%; 
+}
