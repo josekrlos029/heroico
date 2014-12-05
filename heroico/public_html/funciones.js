@@ -323,4 +323,6 @@ function cargarJornadas(){
         $("#contenido").html(msj);
     });
     
+}function mostrarOcultarMenu(){
+    window.plugins.socialsharing.share('Ayudanos a acabar con el abuso infantil', 'Descarga "Heroico" YAA !');
 }
