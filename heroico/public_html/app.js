@@ -110,7 +110,7 @@ var detailsPage =
 
     '<div>' +
         '<div id="header">'+
-              '<table width="100%" height="48px;" border="0"><tr><td width="54px"><a href="#"><button class="btn-izq" onclick="mostrarOcultarMenu();"></button></a></td>'+
+              '<table width="100%" height="48px;" border="0"><tr><td width="54px"><a href="#"><button class="btn-izq" onclick=""></button></a></td>'+
               '<td><div id="title"><img src="images/Logo.png" width="80%"></div></td><td width="54px"><a href="#page10"></div></td></tr></table>'+    
          '</div>'+ 
          '<div id="curva-header"></div>'+  
