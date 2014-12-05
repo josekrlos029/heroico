@@ -8,7 +8,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
 
-    alert("..");
     initPush();
 }
 
@@ -213,7 +212,7 @@ function onNotificationGCM(e) {
         case 'registered':
             if (e.regid.length > 0)
             {
-                alert(e.regid);
+                
                 localStorage.setItem("regId", e.regid);
                 update();
             }
