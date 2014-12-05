@@ -42,7 +42,7 @@ var homePage =
     '<div>' +
         '<div id="header">'+
               '<table width="100%" height="48px;" border="0"><tr><td width="54px"><button class="imgMenu" onclick="mostrarOcultarMenu();"></button></td>'+
-              '<td><div id="title"><img src="images/logo.png" width="80%"></div></td><td width="54px"><a href="#page10"><div class="btn-der">Alerta Rapida</div></a></div></td></tr></table>'+    
+              '<td><div id="title"><img src="images/Logo.png" width="80%"></div></td><td width="54px"><a href="#page10"><div class="btn-der">Alerta Rapida</div></a></div></td></tr></table>'+    
          '</div>'+ 
          '<div id="curva-header"></div>'+   
 
