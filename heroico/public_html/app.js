@@ -150,19 +150,19 @@ var denunciar =
         '<td align="center">Ingresa la informacion requerida</td>'+
     '</tr>'+
     '<tr>'+
-        '<td align="center"><textarea placeholder="Descripcion" class="caja-text"></textarea></td>'+
+        '<td align="center"><textarea id="descripcion" placeholder="Descripcion" class="caja-text"></textarea></td>'+
     '</tr>'+
     '<tr>'+
-        '<td align="center"><select placeholder="Sexo" class="caja-text"><option>M</option><option>F</option></select></td>'+
+        '<td align="center"><select id="sexo" placeholder="Sexo" class="caja-text"><option>M</option><option>F</option></select></td>'+
     '</tr>'+
     '<tr>'+
-        '<td align="center"><input type="number" placeholder="Edad" class="caja-text"></td>'+
+        '<td align="center"><input id="edad" type="number" placeholder="Edad" class="caja-text"></td>'+
     '</tr>'+
     '<tr>'+
-        '<td align="center"><input type="number" placeholder="Telefono" class="caja-text"></td>'+
+        '<td align="center"><input id="telefono" type="number" placeholder="Telefono" class="caja-text"></td>'+
     '</tr>'+
      '<tr>'+
-        '<td align="center"></br><button class="btn-rec rojo" style="width:90%">ENVIAR DENUNCIA</button></td>'+
+        '<td align="center"></br><button onclick="enviarDenuncia()" class="btn-rec rojo" style="width:90%">ENVIAR DENUNCIA</button></td>'+
     '</tr>'+
 '</table>'
 ;
