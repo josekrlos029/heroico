@@ -80,7 +80,7 @@ var homePage =
 
 
         '<div id="footer" class="naranja">'+
-          '<div style="margin-left:5%;"><table width="90%" align="center" border="0"><tr><td width="80%" align="right"><a href="#page2"><button class="btn-rec blanco">HACER UN DENUNCIO</button></a></td><td align="center"><a href="tel:3017693991"><img src="images/Botonllamame.png" width="40px"></img> <a></td></tr></table></div>'+
+          '<div style="margin-left:5%;"><table width="90%" align="center" border="0"><tr><td width="80%" align="right"><a href="#page2"><button class="btn-rec blanco">HACER UN DENUNCIO</button></a></td><td align="center"><a href="tel:3017693991"><img src="images/Botonllamame.png" width="40px"></img> </a></td></tr></table></div>'+
         '</div>'+
 
     
