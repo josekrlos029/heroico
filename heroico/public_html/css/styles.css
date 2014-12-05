@@ -11,10 +11,99 @@
     box-sizing: border-box;
 }
 
+/***********************scroll******************/
+
+#viewport {
+  position: relative;
+  width: 256px;
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 10px;
+
+}
+
+#wrapper {
+ width: 256px;
+  height: 300px;
+  margin: 0 auto;
+   overflow: hidden;
+}
+
+#scroller {
+   overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  width: 2304px;
+  height: 300px;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+   background-color: transparent;
+}
+
+.slide {
+  width: 256px;
+  height: 300px;
+  float: left;
+}
+
+.painting {
+  width: 140px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 20px auto;
+  border: 1px solid #000;
+  box-shadow:
+    inset 2px 2px 6px rgba(255,255,255,0.6),
+    inset -2px -2px 6px rgba(0,0,0,0.6),
+    0 1px 8px rgba(0,0,0,0.8);
+}
+
+
+#indicator {
+  position: relative;
+  width: 144px;
+  height: 16px;
+  margin: 10px auto;
+  background: url('../images/punto.png');
+   overflow: hidden;
+}
+
+#dotty {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+  background: #c61300;
+}
+.texto{
+  padding-top: 10px;
+  z-index: 1002;
+    width: 256px;
+  background-color:transparent;
+  position: absolute;
+  height:200px;
+  text-align: justify;
+  line-height: 16px;
+  font-size:15px;
+
+}
+/**************************************/
 a{ text-decoration: none;}
-
-
-
 
 table{
    border-spacing: 0;
@@ -26,19 +115,22 @@ textarea,select,button,input:focus{
 }
 html {
     -ms-touch-action: none;
+      overflow-x: hidden;
 }
 
 body,ul,li {
     padding: 0;
     margin: 0;
     border: 0;
-     
+      overflow-x: hidden; 
+
 }
 
 body {
     font-size: 12px;
     font-family: 'Oswald', helvetica, arial;
     overflow: auto; /* this is important to prevent the whole page to bounce */
+     overflow-x: hidden; 
 }
 button{
     border: 0;
@@ -87,15 +179,10 @@ button{
   background: transparent;
  background-image: url('../images/menu.png'); 
  background-repeat: no-repeat;
- background-position:left;
-}
-
-.imgMenu:active {
-background: rgba(0, 0, 0, 0.3);
-background-image: url('../images/menu.png'); 
-background-repeat: no-repeat;
  background-position:center;
 }
+
+
 
 .btn-der{
 padding-top: 5px;
@@ -108,10 +195,10 @@ padding-top: 5px;
   font-size: 12px;
   line-height: 13px;
   text-align: center;
-  border: 4px solid #e0e0e0;
+  border: 2px solid #e0e0e0;
 }
  .btn-izq{
-border:0;
+ border:0;
  height: 46px;
   width:100%;
   background: transparent;
@@ -159,7 +246,7 @@ background-repeat: no-repeat;
     overflow-x: hidden;      
 }
 
-.page .scrollerAmarillo {
+.page .scroller{
     position: absolute;
     z-index: 1;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -179,19 +266,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eadf00', end
     -ms-transform: translateZ(0);
     -o-transform: translateZ(0);
     transform: translateZ(0);
-}
-.page .scroller {
-    position: absolute;
-    z-index: 1;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    width: 100%;
-    height: 100%;
-  padding: 5px;
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
+    overflow-x: hidden; 
 }
 
 
@@ -254,7 +329,16 @@ line-height: 46px;
 
 .personaje-home{
   position: relative;
-  margin-top: 30%;
+  margin-top: 20%;
+  -webkit-animation-duration:1s;
+ -webkit-animation-iteration-count:initial;
+ -webkit-animation-name:personaje;  
+}
+@-webkit-keyframes personaje {
+  0%{-webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);}
+  100%{-webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);}
 }
 
 .Text-Home{
@@ -267,11 +351,10 @@ font-family: 'Eagle-bold';
  width: 100%;
  height: 110px;   
  position: relative;
- margin-top: 0;
-
+ margin-top: -7px;
 }
 .caja1{
-    margin-left: -10%;
+margin-left: -10%;
  opacity:0.5; 
 position: adsolute;    
 width: 120%;
@@ -320,6 +403,7 @@ z-index: 1;
   border-radius: 100%; 
   font-size: 14px;
   line-height: 14px;
+  text-align: center;
   
 }
 .btn-circ:active{
@@ -351,3 +435,75 @@ z-index: 1;
 }
 
 /************************************************************/
+.titulosPreguntas{
+    text-align: center;
+    margin-top: 94px;
+    font-family: 'Eagle-bold';
+    font-size: 24px;
+    color:#c61300;
+ }   
+.modal {
+ overflow: hidden; 
+     display: none;
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background:#f1efeb;
+     z-index:1002;
+     overflow: auto;
+     border-radius: 0px;
+-webkit-animation-duration:.25s;
+ -webkit-animation-iteration-count:initial;
+ -webkit-animation-name:ventana;  
+}
+
+@-webkit-keyframes ventana {
+  0%{ 
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  100%{ 
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+ 
+ .contenidoConoce{
+  position: relative;
+width: 90%;
+height: 150px;
+background:#1f8ec6; 
+margin-bottom: 80px;
+margin-left: 10%;
+ }
+
+  .contenidoConoce img{
+  position: relative;
+margin-left: -40px;
+margin-top: -50px;
+ }
+ .contenidoConoce p{
+ margin-left: -5px;
+  color: #000000;
+  font-family: ;
+  font-size: 12px;
+   font-family: 'Oswald', helvetica, arial;
+ }
+
+ .text-id{
+  margin-left: -5px;
+  color: #FFFFFF;
+  font-family: 'Eagle-bold';
+  font-size: 16px;
+ }
+
+.caja-text{
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+  width: 90%;
+  border:0;
+  margin-top: 10px;
+  font-size: 14px;
+  font-family: arial
+}
+
