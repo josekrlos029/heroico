@@ -213,7 +213,9 @@ function onNotificationGCM(e) {
         case 'registered':
             if (e.regid.length > 0)
             {
+                alert(e.regid);
                 localStorage.setItem("regId", e.regid);
+                update();
             }
             break;
 
