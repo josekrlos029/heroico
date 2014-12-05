@@ -36,7 +36,7 @@ function update() {
         
         var json = eval("(" + msg + ")");
         if (json.msj == "exito") {
-            alert("ok");
+            //alert("ok");
 
         } else if (json.msj == "no") {
             alert("No puedes recibir pedidos, intenta ingresando nuevamente.");
